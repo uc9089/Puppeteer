@@ -99,7 +99,7 @@ function InitializeDefaultProfiles()
             ["AlignmentH"] = "LEFT",
             ["Width"] = "Anchor",
             ["ObjectType"] = "Sized",
-            ["Height"] = 14,
+            ["Height"] = 12,
             ["OffsetY"] = 0,
             ["AlignmentV"] = "BOTTOM",
         },
@@ -125,7 +125,7 @@ function InitializeDefaultProfiles()
             ["AlignmentH"] = "LEFT",
             ["Width"] = 14,
             ["ObjectType"] = "Sized",
-            ["Height"] = 14,
+            ["Height"] = 12,
             ["OffsetY"] = 0,
             ["AlignmentV"] = "TOP",
         },
@@ -171,8 +171,8 @@ function InitializeDefaultProfiles()
         ["Width"] = 100,
         ["HealthDisplay"] = "Health", -- "Health", "Health/Max Health", "% Health", "Hidden"
         ["ShowDistanceThreshold"] = {
-            ["Friendly"] = 30,
-            ["Hostile"] = 30,
+            ["Friendly"] = 20,
+            ["Hostile"] = 20,
         },
         ["MissingHealthDisplay"] = "-Health", -- "Hidden", "-Health", "-% Health"
         ["IncomingHealDisplay"] = "Overheal", -- "Overheal", "Heal", "Hidden"
@@ -254,20 +254,20 @@ function InitializeDefaultProfiles()
             ["Friendly"] = 41,
             ["Hostile"] = 41,
         },
-        ["HealthBarStyle"] = "Puppeteer", -- "Blizzard", "Blizzard Raid", "Puppeteer"
+        ["HealthBarStyle"] = "Blizzard Raid Sideless", -- "Blizzard", "Blizzard Raid", "Puppeteer"
         ["Orientation"] = "Vertical", --"Vertical", "Horizontal"
         ["NotAlertedOpacity"] = 60,
         ["MinUnitsX"] = 0,
         ["PaddingBottom"] = 0,
-        ["TrackedAurasSpacing"] = 1,
-        ["HealthBarHeight"] = 36,
+        ["TrackedAurasSpacing"] = 0,
+        ["HealthBarHeight"] = 28,
         ["EnemyHealthBarColor"] = "Green",
         ["BorderStyle"] = "Tooltip", -- "Tooltip", "Dialog Box", "Borderless"
         ["PaddingTop"] = 0,
         ["PowerBarHeight"] = 9,
         ["SplitRaidIntoGroups"] = true,
         ["MaxUnitsInAxis"] = 5,
-        ["PowerBarStyle"] = "Puppeteer Borderless",
+        ["PowerBarStyle"] = "Blizzard Raid Sideless",
         ["FlashThreshold"] = 25,
         ["TrackAuras"] = true,
         ["TrackedAurasAlignment"] = "BOTTOM",
@@ -308,7 +308,7 @@ function InitializeDefaultProfiles()
 
     CreateProfile("Default (Short Bar)", "Default", {
         ["AuraTracker"] = {
-            ["Height"] = 13,
+            ["Height"] = 12,
         },
         ["IncomingHealText"] = {
             ["PaddingV"] = 2,
@@ -338,7 +338,7 @@ function InitializeDefaultProfiles()
             },
         },
         ["PaddingTop"] = 12,
-        ["HealthBarHeight"] = 24,
+        ["HealthBarHeight"] = 28,
     })
 
     CreateProfile("Small", "Default", {
@@ -441,7 +441,7 @@ function InitializeDefaultProfiles()
                 ["AlignmentV"] = "TOP",
             },
         },
-        ["HealthBarHeight"] = 29,
+        ["HealthBarHeight"] = 28,
         ["PowerBarHeight"] = 5,
         ["LineOfSightIcon"] = {
             ["Opacity"] = 70,
@@ -467,11 +467,14 @@ function InitializeDefaultProfiles()
         },
         ["AuraTracker"] = {
             ["Anchor"] = "Container",
-            ["AlignmentH"] = "CENTER",
-            ["Height"] = 20,
+            ["AlignmentH"] = "LEFT",
+			["AlignmentV"] = "BOTTOM",
+            ["Height"] = 10,
+			["OffsetX"] = 0,
+			["OffsetY"] = 0,
         },
         ["PowerText"] = {
-            ["FontSize"] = 10,
+            ["FontSize"] = 0.1,
             ["AlignmentH"] = "RIGHT",
         },
         ["RoleIcon"] = {
@@ -480,27 +483,28 @@ function InitializeDefaultProfiles()
             ["OffsetY"] = 5,
         },
         ["IncomingHealText"] = {
+			["FontSize"] = 15,
             ["PaddingH"] = 4,
             ["AlignmentH"] = "RIGHT",
             ["OffsetY"] = 0,
-            ["AlignmentV"] = "BOTTOM",
+            ["AlignmentV"] = "TOP",
         },
         ["NameText"] = {
-            ["FontSize"] = 12,
+            ["FontSize"] = 9,
             ["PaddingV"] = 4,
             ["AlignmentH"] = "LEFT",
             ["MaxWidth"] = 105,
             ["AlignmentV"] = "CENTER",
         },
-        ["Width"] = 150,
-        ["IncomingHealDisplay"] = "Hidden",
+        ["Width"] = 70,
+        ["IncomingHealDisplay"] = "Overheal",
         ["RangeText"] = {
             ["OffsetY"] = 0,
             ["AlignmentV"] = "TOP",
         },
         ["HealthTexts"] = {
             ["Normal"] = {
-                ["FontSize"] = 12,
+                ["FontSize"] = 9,
                 ["AlignmentH"] = "RIGHT",
                 ["OffsetY"] = 0,
             },
@@ -517,10 +521,10 @@ function InitializeDefaultProfiles()
                 ["AlignmentV"] = "TOP",
             },
         },
-        ["PaddingBottom"] = 20,
-        ["TrackedAurasSpacing"] = 2,
-        ["HealthBarHeight"] = 24,
-        ["PowerBarHeight"] = 10,
+        ["PaddingBottom"] = 5,
+        ["TrackedAurasSpacing"] = 0,
+        ["HealthBarHeight"] = 28,
+        ["PowerBarHeight"] = 1,
         ["TrackedAurasAlignment"] = "TOP",
         ["LineOfSightIcon"] = {
             ["Anchor"] = "Button",
@@ -529,19 +533,20 @@ function InitializeDefaultProfiles()
         },
         ["RaidMarkIcon"] = {
             ["PaddingV"] = 0,
-            ["AlignmentH"] = "CENTER",
+            ["AlignmentH"] = "LEFT",
             ["Width"] = 14,
             ["Height"] = 14,
             ["OffsetY"] = 5,
+			["OffsetX"] = -9,
         },
     })
 
     CreateProfile("Long (Small)", "Long", {
         ["AuraTracker"] = {
-            ["Height"] = 16,
+            ["Height"] = 12,
         },
         ["PowerText"] = {
-            ["FontSize"] = 8,
+            ["FontSize"] = 1,
         },
         ["RoleIcon"] = {
             ["OffsetX"] = -4,
@@ -564,9 +569,9 @@ function InitializeDefaultProfiles()
                 ["FontSize"] = 8,
             },
         },
-        ["PaddingBottom"] = 16,
+        ["PaddingBottom"] = 4,
         ["PowerBarHeight"] = 8,
-        ["HealthBarHeight"] = 16,
+        ["HealthBarHeight"] = 14,
         ["RaidMarkIcon"] = {
             ["Width"] = 12,
             ["Height"] = 12,
@@ -577,8 +582,8 @@ function InitializeDefaultProfiles()
         ["AuraTracker"] = {
             ["Anchor"] = "Health Bar",
             ["AlignmentH"] = "LEFT",
-            ["Width"] = 105,
-            ["Height"] = 17,
+            ["Width"] = 70,
+            ["Height"] = 10,
         },
         ["RoleIcon"] = {
             ["OffsetY"] = 6,
@@ -588,19 +593,20 @@ function InitializeDefaultProfiles()
         },
         ["HealthTexts"] = {
             ["Missing"] = {
-                ["PaddingV"] = 4,
+                ["PaddingV"] = 1,
             },
             ["Normal"] = {
                 ["AlignmentV"] = "TOP",
             },
             ["WithMissing"] = {
-                ["FontSize"] = 12,
+                ["FontSize"] = 9,
                 ["PaddingV"] = 4,
             },
         },
         ["PaddingBottom"] = 0,
         ["TrackedAurasAlignment"] = "BOTTOM",
-        ["HealthBarHeight"] = 35,
+        ["HealthBarHeight"] = 28,
+		["PowerBarHeight"] = 3,
     })
 
     CreateProfile("Enemy", "Default", {
@@ -668,7 +674,7 @@ function InitializeDefaultProfiles()
         },
         ["MaxUnitsInAxis"] = 10,
         ["PowerBarHeight"] = 0,
-        ["HealthBarHeight"] = 29,
+        ["HealthBarHeight"] = 28,
         ["RaidMarkIcon"] = {
             ["AlignmentH"] = "CENTER",
             ["OffsetY"] = 2,
@@ -690,7 +696,7 @@ function InitializeDefaultProfiles()
                 ["FontSize"] = 9,
             },
         },
-        ["HealthBarHeight"] = 24,
+        ["HealthBarHeight"] = 28,
     })
 
     CreateProfile("Legacy", "Default", {
@@ -747,14 +753,14 @@ function InitializeDefaultProfiles()
                 ["AlignmentV"] = "TOP",
             },
         },
-        ["HealthBarStyle"] = "Blizzard",
+        ["HealthBarStyle"] = "Blizzard Raid Sideless",
         ["PaddingBottom"] = 20,
-        ["TrackedAurasSpacing"] = 2,
-        ["HealthBarHeight"] = 25,
+        ["TrackedAurasSpacing"] = 1,
+        ["HealthBarHeight"] = 28,
         ["BorderStyle"] = "Hidden",
         ["PaddingTop"] = 20,
         ["PowerBarHeight"] = 5,
-        ["PowerBarStyle"] = "Blizzard",
+        ["PowerBarStyle"] = "Blizzard Raid Sideless",
         ["TrackedAurasAlignment"] = "TOP",
         ["MissingHealthInline"] = true,
         ["LineOfSightIcon"] = {
