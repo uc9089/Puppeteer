@@ -373,7 +373,7 @@ DefaultTrackedHealingDebuffs = {"Mortal Strike", "Wound Poison", "Curse of the D
 DefaultTrackedBuffs = {
     "Blessing of Protection", "Hand of Protection", "Divine Protection", "Divine Shield", "Divine Intervention", -- Paladin
         "Bulwark of the Righteous", "Blessing of Sacrifice", "Hand of Sacrifice",
-    "Power Infusion", "Spirit of Redemption", "Inner Focus", "Abolish Disease", "Power Word: Shield", "Mind Control", -- Priest
+    "Power Infusion", "Spirit of Redemption", "Inner Focus", "Abolish Disease", "Power Word: Shield", "Mind Control", "Greater Heal", -- Priest
     "Shield Wall", "Recklessness", "Last Stand", -- Warrior
     "Evasion", "Vanish", -- Rogue
     "Deterrence", "Feign Death", "Mend Pet", -- Hunter
@@ -411,14 +411,15 @@ DefaultTrackedDebuffs = {
     "Frost Nova", "Polymorph", -- Mage
     "Fear", "Seduction", -- Warlock
     "Recently Bandaged", "Resurrection Sickness", "Ghost", "Net", -- Generic
-    "Deafening Screech", "Hooked Net", "Web Explosion", "Chains of Ice", -- Applied by mobs
+    "Deafening Screech", "Hooked Net", "Web Explosion", "Chains of Ice", "Dazed", -- Applied by mobs
     "Fungal Spores", -- Stormwrought Castle
     "Hex", -- Zul'Farrak
     "Bellowing Roar", -- Onyxia/Nefarian
     "Brood Affliction: Bronze", "Corrupted Healing", -- BWL
     "Phantom Scream", "Smoke Bomb", -- Kara10
     "Acid Spit", "Call of Nightmare", -- Emerald Sanctum
-    "Corrupted Mind", "Frost Blast", "Veil of Darkness" -- Naxxramas
+    "Corrupted Mind", "Frost Blast", "Veil of Darkness", -- Naxxramas
+	"Surge of Mana", "Blizzard" --UKH
 }
 -- Tracked debuffs for specific classes
 DefaultClassTrackedDebuffs = {
