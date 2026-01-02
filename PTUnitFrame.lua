@@ -475,7 +475,7 @@ function PTUnitFrame:UpdateHealth()
 
     if not UnitIsConnected(unit) and (not fake or not fakeOnline) then
         self.nameText:SetText(self:ColorizeText(unitName, profile.NameText.Color))
-        self.healthText:SetText(colorize("Offline", 0.7, 0.7, 0.7))
+        self.healthText:SetText(colorize("-", 0.7, 0.7, 0.7))
         self.missingHealthText:SetText("")
         self:SetHealthBarValue(0)
         self.powerBar:SetValue(0)
@@ -613,7 +613,7 @@ function PTUnitFrame:UpdateHealth()
     self:AdjustHealthPosition()
 end
 
-local greenToRedColors = {{1, 0, 0}, {1, 0.3, 0}, {1, 1, 0}, {0.6, 0.92, 0}, {0, 0.8, 0}}
+local greenToRedColors = {{1, 0, 0}, {1, 0.3, 0}, {1, 1, 0}, {0.4, 0.7, 0}, {0, 0, 0}}
 function PTUnitFrame:SetHealthBarValue(value)
     local unit = self.unit
     local healthBar = self.healthBar
@@ -1171,7 +1171,7 @@ function PTUnitFrame:CreateAura(aura, name, index, texturePath, stacks, auraType
     if stacks > 1 then
         local stackText = aura.stackText
         stackText:SetPoint("CENTER", frame, "CENTER", 0, 0)
-        stackText:SetFont("Fonts\\FRIZQT__.TTF", math.ceil(size * (stacks < 10 and 0.75 or 0.6)))
+        stackText:SetFont("Interface\\AddOns\\Puppeteer\\fonts\\BigNoodleTitling.ttf", math.ceil(size * (stacks < 10 and 0.75 or 0.6)))
         stackText:SetText(stacks)
     end
 
@@ -1560,7 +1560,7 @@ function PTUnitFrame:UpdateComponent(component, props, xOffset, yOffset)
     if component.SetFont then -- Must be a FontString
         component:SetWidth(math.min(props:GetMaxWidth(), anchor:GetWidth()))
         component:SetHeight(props.FontSize * 1.25)
-        component:SetFont("Fonts\\FRIZQT__.TTF", props.FontSize, props.Outline and "OUTLINE" or nil)
+        component:SetFont("Interface\\AddOns\\Puppeteer\\fonts\\BigNoodleTitling.ttf", props.FontSize, props.Outline and "OUTLINE" or nil)
         if props.Outline then
             component:SetShadowOffset(0, 0)
         end
