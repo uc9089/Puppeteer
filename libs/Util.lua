@@ -798,7 +798,7 @@ function GetSurroundingPartyMembers(player, range)
         AppendArrayElements(units, PetUnits)
     end
 
-    return GetUnitsInRange(player, units, range or 30)
+    return GetUnitsInRange(player, units, range or 20)
 end
 
 function GetSurroundingRaidMembers(player, range, checkPets)
@@ -815,7 +815,7 @@ function GetSurroundingRaidMembers(player, range, checkPets)
         end
     end
 
-    return GetUnitsInRange(player, units, range or 30)
+    return GetUnitsInRange(player, units, range or 20)
 end
 
 function GetUnitsInRange(center, units, range)
@@ -823,7 +823,7 @@ function GetUnitsInRange(center, units, range)
     for _, unit in ipairs(units) do
         local exists, guid = UnitExists(unit)
         if exists and UnitIsConnected(unit) and not UnitIsDeadOrGhost(unit) and 
-            GetDistanceBetween(center, unit) <= (range or 30) then
+            GetDistanceBetween(center, unit) <= (range or 20) then
             table.insert(inRange, guid)
         end
     end
