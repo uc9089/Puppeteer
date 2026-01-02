@@ -22,7 +22,7 @@ function PTCastIcon:New()
     progressEdge:SetHeight(1)
     local castOrder = frame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
     castOrder:SetTextColor(1, 1, 1)
-    castOrder:SetFont("Fonts\\FRIZQT__.TTF", 11, "OUTLINE")
+    castOrder:SetFont("Interface\\AddOns\\Puppeteer\\fonts\\BigNoodleTitling.ttf", 11, "OUTLINE")
     castOrder:SetShadowOffset(0, 0)
     castOrder:ClearAllPoints()
     castOrder:SetPoint("CENTER", frame)
@@ -126,10 +126,10 @@ function PTCastIcon:Start(spellName, spellTexture, time, unit, healAmount, unitF
     self:SetSize(size, size)
     local order = self.castOrder
     if isCasterSelf then
-        order:SetFont("Fonts\\FRIZQT__.TTF", size, "OUTLINE")
+        order:SetFont("Interface\\AddOns\\Puppeteer\\fonts\\BigNoodleTitling.ttf", size, "OUTLINE")
         order:SetTextColor(1, 1, 0)
     else
-        order:SetFont("Fonts\\FRIZQT__.TTF", size - 1, "OUTLINE")
+        order:SetFont("Interface\\AddOns\\Puppeteer\\fonts\\BigNoodleTitling.ttf", size - 1, "OUTLINE")
         order:SetTextColor(0.9, 0.9, 0.9)
     end
     if not unitFrame.castIcons then
